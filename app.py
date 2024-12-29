@@ -11,7 +11,7 @@ st.title("🌦️ Rainfall Prediction App")
 st.write("This app predicts whether it will rain based on weather conditions. Enter the required parameters below to get started.")
 
 # Add an image
-st.image("rain.jpeg", caption="Predict Rainfall with AI", use_column_width=True)
+st.image("rain.jpeg", caption="Predict Rainfall with AI")
 
 # Input fields for features
 st.subheader("Input Weather Conditions")
