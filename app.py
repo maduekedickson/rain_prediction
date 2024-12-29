@@ -2,9 +2,20 @@ import streamlit as st
 import pickle
 import numpy as np
 
+
+
+try:
+    with open('logistic_regression_model.pkl', 'rb') as file:
+        model = pickle.load(file)
+except FileNotFoundError:
+    st.error("Model file not found. Please upload it.")
+except Exception as e:
+    st.error(f"Error loading the model: {e}")
+
+
 # Load the model
-with open('logistic_regression_model.pkl', 'rb') as file:
-    model = pickle.load(file)
+#with open('logistic_regression_model.pkl', 'rb') as file:
+    #model = pickle.load(file)
 
 # Add a title and an image
 st.title("🌦️ Rainfall Prediction App")
