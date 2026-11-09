@@ -1,0 +1,54 @@
+{
+  "features": [
+    "pressure",
+    "maxtemp",
+    "mintemp",
+    "dewpoint",
+    "humidity",
+    "cloud",
+    "sunshine",
+    "winddirection",
+    "windspeed"
+  ],
+  "models": {
+    "Logistic Regression (Scaled)": {
+      "Accuracy": 0.814,
+      "Precision": 0.84,
+      "Recall": 0.9,
+      "F1_Score": 0.868,
+      "ROC_AUC": 0.874
+    },
+    "Random Forest": {
+      "Accuracy": 0.792,
+      "Precision": 0.825,
+      "Recall": 0.883,
+      "F1_Score": 0.853,
+      "ROC_AUC": 0.853
+    },
+    "Gradient Boosting": {
+      "Accuracy": 0.784,
+      "Precision": 0.82,
+      "Recall": 0.875,
+      "F1_Score": 0.847,
+      "ROC_AUC": 0.83
+    },
+    "Decision Tree": {
+      "Accuracy": 0.768,
+      "Precision": 0.823,
+      "Recall": 0.843,
+      "F1_Score": 0.832,
+      "ROC_AUC": 0.78
+    }
+  },
+  "feature_importances_rf": {
+    "cloud": 0.281,
+    "sunshine": 0.217,
+    "humidity": 0.147,
+    "windspeed": 0.072,
+    "dewpoint": 0.067,
+    "mintemp": 0.06,
+    "pressure": 0.06,
+    "maxtemp": 0.055,
+    "winddirection": 0.042
+  }
+}

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 400" width="100%" height="100%">
+  <defs>
+    <style>
+      .hdr { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 16px; font-weight: bold; fill: #1E293B; }
+      .sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 12px; fill: #64748B; }
+      .axis-lbl { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 13px; font-weight: bold; fill: #475569; }
+      .cell-val { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 26px; font-weight: bold; }
+      .cell-sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 11px; }
+    </style>
+  </defs>
+
+  <rect width="540" height="400" fill="#FFFFFF" rx="10"/>
+
+  <text x="30" y="35" class="hdr">Confusion Matrix (20% Stratified Holdout Test)</text>
+  <text x="30" y="55" class="sub">Holdout Set Size: N = 74 | Recall (Sensitivity): 92.0%</text>
+
+  <!-- Headers -->
+  <text x="245" y="95" class="axis-lbl" text-anchor="middle">Predicted: No Rain</text>
+  <text x="405" y="95" class="axis-lbl" text-anchor="middle">Predicted: Rain</text>
+
+  <text x="75" y="180" class="axis-lbl" text-anchor="middle" transform="rotate(-90 75 180)">Actual: No Rain</text>
+  <text x="75" y="300" class="axis-lbl" text-anchor="middle" transform="rotate(-90 75 300)">Actual: Rain</text>
+
+  <!-- Cell 1: TN (16) -->
+  <rect x="170" y="110" width="150" height="110" rx="8" fill="#E0F2FE" stroke="#BAE6FD" stroke-width="2"/>
+  <text x="245" y="165" class="cell-val" fill="#0369A1" text-anchor="middle">16</text>
+  <text x="245" y="190" class="cell-sub" fill="#0284C7" text-anchor="middle">True Negative (66.7%)</text>
+
+  <!-- Cell 2: FP (8) -->
+  <rect x="330" y="110" width="150" height="110" rx="8" fill="#FEF3C7" stroke="#FDE68A" stroke-width="2"/>
+  <text x="405" y="165" class="cell-val" fill="#B45309" text-anchor="middle">8</text>
+  <text x="405" y="190" class="cell-sub" fill="#D97706" text-anchor="middle">False Positive (Type I)</text>
+
+  <!-- Cell 3: FN (4) -->
+  <rect x="170" y="230" width="150" height="110" rx="8" fill="#FEE2E2" stroke="#FECACA" stroke-width="2"/>
+  <text x="245" y="285" class="cell-val" fill="#B91C1C" text-anchor="middle">4</text>
+  <text x="245" y="310" class="cell-sub" fill="#DC2626" text-anchor="middle">False Negative (Type II)</text>
+
+  <!-- Cell 4: TP (46) -->
+  <rect x="330" y="230" width="150" height="110" rx="8" fill="#DCFCE7" stroke="#BBF7D0" stroke-width="2"/>
+  <text x="405" y="285" class="cell-val" fill="#15803D" text-anchor="middle">46</text>
+  <text x="405" y="310" class="cell-sub" fill="#16A34A" text-anchor="middle">True Positive (92.0%)</text>
+
+  <!-- Summary text -->
+  <text x="270" y="375" class="sub" text-anchor="middle">Overall Test Accuracy: 83.8% (62/74) | F1-Score: 0.885</text>
+</svg>

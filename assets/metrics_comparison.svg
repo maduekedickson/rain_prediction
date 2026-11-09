@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 18px; font-weight: bold; fill: #1E293B; }
+      .subtitle { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 12px; fill: #64748B; }
+      .label { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 13px; font-weight: 600; fill: #334155; }
+      .bar-label { font-family: monospace; font-size: 12px; font-weight: bold; fill: #FFFFFF; }
+      .grid-line { stroke: #E2E8F0; stroke-width: 1; stroke-dasharray: 4; }
+      .axis-text { font-family: monospace; font-size: 11px; fill: #94A3B8; }
+    </style>
+  </defs>
+
+  <rect width="800" height="380" fill="#FFFFFF" rx="10"/>
+
+  <text x="40" y="40" class="title">Model Benchmark: 5-Fold Stratified Cross-Validation</text>
+  <text x="40" y="60" class="subtitle">Evaluated on 366 daily meteorological records across 5 folds</text>
+
+  <!-- Grid lines -->
+  <line x1="220" y1="90" x2="220" y2="320" class="grid-line"/>
+  <line x1="330" y1="90" x2="330" y2="320" class="grid-line"/>
+  <line x1="440" y1="90" x2="440" y2="320" class="grid-line"/>
+  <line x1="550" y1="90" x2="550" y2="320" class="grid-line"/>
+  <line x1="660" y1="90" x2="660" y2="320" class="grid-line"/>
+
+  <!-- Axis text -->
+  <text x="220" y="340" class="axis-text" text-anchor="middle">0.50</text>
+  <text x="330" y="340" class="axis-text" text-anchor="middle">0.60</text>
+  <text x="440" y="340" class="axis-text" text-anchor="middle">0.70</text>
+  <text x="550" y="340" class="axis-text" text-anchor="middle">0.80</text>
+  <text x="660" y="340" class="axis-text" text-anchor="middle">0.90</text>
+
+  <!-- Logistic Regression (Scaled) -->
+  <!-- ROC_AUC = 0.874 -> x = 110 + 0.874 * 611 = 644 -->
+  <text x="40" y="115" class="label">Logistic Regression (Scaled)</text>
+  <rect x="220" y="98" width="411" height="24" rx="4" fill="#0288D1"/>
+  <text x="615" y="115" class="bar-label" text-anchor="end">AUC: 87.4% | Acc: 81.4%</text>
+
+  <!-- Random Forest -->
+  <!-- ROC_AUC = 0.853 -> width = 388 -->
+  <text x="40" y="170" class="label">Random Forest (Tuned)</text>
+  <rect x="220" y="153" width="388" height="24" rx="4" fill="#10B981"/>
+  <text x="590" y="170" class="bar-label" text-anchor="end">AUC: 85.3% | Acc: 79.2%</text>
+
+  <!-- Gradient Boosting -->
+  <!-- ROC_AUC = 0.830 -> width = 363 -->
+  <text x="40" y="225" class="label">Gradient Boosting</text>
+  <rect x="220" y="208" width="363" height="24" rx="4" fill="#F59E0B"/>
+  <text x="565" y="225" class="bar-label" text-anchor="end">AUC: 83.0% | Acc: 78.4%</text>
+
+  <!-- Decision Tree -->
+  <!-- ROC_AUC = 0.780 -> width = 308 -->
+  <text x="40" y="280" class="label">Decision Tree</text>
+  <rect x="220" y="263" width="308" height="24" rx="4" fill="#64748B"/>
+  <text x="510" y="280" class="bar-label" text-anchor="end">AUC: 78.0% | Acc: 76.8%</text>
+
+  <rect x="220" y="360" width="12" height="12" rx="2" fill="#0288D1"/>
+  <text x="240" y="371" class="subtitle">Champion: Scaled Logistic Regression (Highest Generalization &amp; Recall = 90.0%)</text>
+</svg>

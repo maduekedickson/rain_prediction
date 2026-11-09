@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 420" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 17px; font-weight: bold; fill: #1E293B; }
+      .sub { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 12px; fill: #64748B; }
+      .feat { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; font-size: 13px; font-weight: 500; fill: #334155; }
+      .pct { font-family: monospace; font-size: 12px; font-weight: bold; fill: #0284C7; }
+    </style>
+  </defs>
+
+  <rect width="750" height="420" fill="#FFFFFF" rx="10"/>
+
+  <text x="35" y="35" class="title">Meteorological Feature Importance (Tree-Ensemble Impurity)</text>
+  <text x="35" y="55" class="sub">Quantifying atmospheric drivers of daily precipitation likelihood</text>
+
+  <!-- 1. Cloud Coverage (28.1%) -->
+  <text x="35" y="95" class="feat">Cloud Coverage (%)</text>
+  <rect x="200" y="80" width="450" height="20" rx="4" fill="#E2E8F0"/>
+  <rect x="200" y="80" width="379" height="20" rx="4" fill="#0284C7"/>
+  <text x="665" y="95" class="pct">28.1%</text>
+
+  <!-- 2. Sunshine Hours (21.7%) -->
+  <text x="35" y="130" class="feat">Sunshine (hours)</text>
+  <rect x="200" y="115" width="450" height="20" rx="4" fill="#E2E8F0"/>
+  <rect x="200" y="115" width="293" height="20" rx="4" fill="#0284C7"/>
+  <text x="665" y="130" class="pct">21.7%</text>
+
+  <!-- 3. Relative Humidity (14.7%) -->
+  <text x="35" y="165" class="feat">Relative Humidity (%)</text>
+  <rect x="200" y="150" width="450" height="20" rx="4" fill="#E2E8F0"/>
+  <rect x="200" y="150" width="198" height="20" rx="4" fill="#0EA5E9"/>
+  <text x="665" y="165" class="pct">14.7%</text>
+
+  <!-- 4. Wind Speed (7.2%) -->
+  <text x="35" y="200" class="feat">Wind Speed (km/h)</text>
+  <rect x="200" y="185" width="450" height="20" rx="4" fill="#E2E8F0"/>
+  <rect x="200" y="185" width="97" height="20" rx="4" fill="#38BDF8"/>
+  <text x="665" y="200" class="pct">7.2%</text>
+
+  <!-- 5. Dew Point (6.7%) -->
+  <text x="35" y="235" class="feat">Dew Point (°C)</text>
+  <rect x="200" y="220" width="450" height="20" rx="4" fill="#E2E8F0"/>
+  <rect x="200" y="220" width="90" height="20" rx="4" fill="#38BDF8"/>
+  <text x="665" y="235" class="pct">6.7%</text>
+
+  <!-- 6. Minimum Temp (6.0%) -->
+  <text x="35" y="270" class="feat">Minimum Temp (°C)</text>
+  <rect x="200" y="255" width="450" height="20" rx="4" fill="#E2E8F0"/>
+  <rect x="200" y="255" width="81" height="20" rx="4" fill="#7DD3FC"/>
+  <text x="665" y="270" class="pct">6.0%</text>
+
+  <!-- 7. Atmospheric Pressure (6.0%) -->
+  <text x="35" y="305" class="feat">Pressure (hPa)</text>
+  <rect x="200" y="290" width="450" height="20" rx="4" fill="#E2E8F0"/>
+  <rect x="200" y="290" width="81" height="20" rx="4" fill="#7DD3FC"/>
+  <text x="665" y="305" class="pct">6.0%</text>
+
+  <!-- 8. Maximum Temp (5.5%) -->
+  <text x="35" y="340" class="feat">Maximum Temp (°C)</text>
+  <rect x="200" y="325" width="450" height="20" rx="4" fill="#E2E8F0"/>
+  <rect x="200" y="325" width="74" height="20" rx="4" fill="#BAE6FD"/>
+  <text x="665" y="340" class="pct">5.5%</text>
+
+  <!-- 9. Wind Direction (4.2%) -->
+  <text x="35" y="375" class="feat">Wind Direction (°)</text>
+  <rect x="200" y="360" width="450" height="20" rx="4" fill="#E2E8F0"/>
+  <rect x="200" y="360" width="57" height="20" rx="4" fill="#BAE6FD"/>
+  <text x="665" y="375" class="pct">4.2%</text>
+</svg>

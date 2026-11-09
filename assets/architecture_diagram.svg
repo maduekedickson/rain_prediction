@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 950 260" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0288D1"/>
+      <stop offset="100%" stop-color="#01579B"/>
+    </linearGradient>
+    <linearGradient id="prepGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00897B"/>
+      <stop offset="100%" stop-color="#004D40"/>
+    </linearGradient>
+    <linearGradient id="modelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7B1FA2"/>
+      <stop offset="100%" stop-color="#4A148C"/>
+    </linearGradient>
+    <linearGradient id="appGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E65100"/>
+      <stop offset="100%" stop-color="#BF360C"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="115%" height="115%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="950" height="260" fill="#F8FAFC" rx="12"/>
+
+  <!-- Step 1: Raw Observations -->
+  <g filter="url(#shadow)">
+    <rect x="30" y="45" width="190" height="170" rx="10" fill="url(#skyGrad)"/>
+    <text x="125" y="75" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto" font-size="16" font-weight="bold" text-anchor="middle">1. Raw Weather Data</text>
+    <line x1="50" y1="90" x2="200" y2="90" stroke="#81D4FA" stroke-width="1.5"/>
+    <text x="50" y="115" fill="#E1F5FE" font-family="monospace" font-size="12">• Pressure, Temp</text>
+    <text x="50" y="135" fill="#E1F5FE" font-family="monospace" font-size="12">• Humidity, Cloud %</text>
+    <text x="50" y="155" fill="#E1F5FE" font-family="monospace" font-size="12">• Sunshine Hours</text>
+    <text x="50" y="175" fill="#E1F5FE" font-family="monospace" font-size="12">• Wind Speed &amp; Dir</text>
+    <text x="125" y="200" fill="#B3E5FC" font-size="11" text-anchor="middle">366 Daily Records</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 230 130 L 255 130" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="265,130 255,124 255,136" fill="#94A3B8"/>
+
+  <!-- Step 2: Ingestion & Preprocessing -->
+  <g filter="url(#shadow)">
+    <rect x="270" y="45" width="190" height="170" rx="10" fill="url(#prepGrad)"/>
+    <text x="365" y="75" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto" font-size="16" font-weight="bold" text-anchor="middle">2. Pipeline Cleaning</text>
+    <line x1="290" y1="90" x2="440" y2="90" stroke="#80CBC4" stroke-width="1.5"/>
+    <text x="290" y="115" fill="#E0F2F1" font-family="monospace" font-size="12">• Whitespace Stripping</text>
+    <text x="290" y="135" fill="#E0F2F1" font-family="monospace" font-size="12">• Median Imputation</text>
+    <text x="290" y="155" fill="#E0F2F1" font-family="monospace" font-size="12">• Standard Scaling</text>
+    <text x="290" y="175" fill="#E0F2F1" font-family="monospace" font-size="12">• Schema Validation</text>
+    <text x="365" y="200" fill="#B2DFDB" font-size="11" text-anchor="middle">Leak-Free Pipeline</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 470 130 L 495 130" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="505,130 495,124 495,136" fill="#94A3B8"/>
+
+  <!-- Step 3: Benchmarked Models -->
+  <g filter="url(#shadow)">
+    <rect x="510" y="45" width="190" height="170" rx="10" fill="url(#modelGrad)"/>
+    <text x="605" y="75" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto" font-size="16" font-weight="bold" text-anchor="middle">3. ML Benchmarking</text>
+    <line x1="530" y1="90" x2="680" y2="90" stroke="#CE93D8" stroke-width="1.5"/>
+    <text x="530" y="115" fill="#F3E5F5" font-family="monospace" font-size="12">• Scaled Logistic Reg.</text>
+    <text x="530" y="135" fill="#F3E5F5" font-family="monospace" font-size="12">• Random Forest</text>
+    <text x="530" y="155" fill="#F3E5F5" font-family="monospace" font-size="12">• Gradient Boosting</text>
+    <text x="530" y="175" fill="#F3E5F5" font-family="monospace" font-size="12">• Stratified 5-Fold CV</text>
+    <text x="605" y="200" fill="#E1BEE7" font-size="11" text-anchor="middle">AUC = 0.874 | F1 = 0.868</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <path d="M 710 130 L 735 130" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="745,130 735,124 735,136" fill="#94A3B8"/>
+
+  <!-- Step 4: Streamlit Deployment -->
+  <g filter="url(#shadow)">
+    <rect x="750" y="45" width="170" height="170" rx="10" fill="url(#appGrad)"/>
+    <text x="835" y="75" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto" font-size="16" font-weight="bold" text-anchor="middle">4. Streamlit Cloud</text>
+    <line x1="770" y1="90" x2="900" y2="90" stroke="#FFCC80" stroke-width="1.5"/>
+    <text x="770" y="115" fill="#FFF3E0" font-family="monospace" font-size="12">• PoP Probability %</text>
+    <text x="770" y="135" fill="#FFF3E0" font-family="monospace" font-size="12">• Low/Med/High Tier</text>
+    <text x="770" y="155" fill="#FFF3E0" font-family="monospace" font-size="12">• Batch CSV Scoring</text>
+    <text x="770" y="175" fill="#FFF3E0" font-family="monospace" font-size="12">• Feature Analytics</text>
+    <text x="835" y="200" fill="#FFE0B2" font-size="11" text-anchor="middle">Interactive UI</text>
+  </g>
+</svg>
